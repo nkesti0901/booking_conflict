@@ -27,5 +27,9 @@ Use the following GET route:
 #### localhost:8000/api/booking/conflict?date=2024-05-10
 Please remember to change the date based on seeded data.
 
-## Final notes
-Since it wasn't in the requirement file I didn't write any automated tests for the application but I think It could make the application a lot more comprehensive 
+## Running Tests
+Please run the following command to run the tests:
+
+---
+    php artisan test
+---
