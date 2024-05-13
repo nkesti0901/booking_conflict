@@ -25,6 +25,9 @@ Then run the following command:
 ## Checking the result
 Use the following GET route:
 #### localhost:8000/api/booking/conflict?date=2024-05-10
+Or check the following link in your browser:
+#### localhost:8000/booking/conflict?date=2024-05-10
+
 Please remember to change the date based on seeded data.
 
 ## Running Tests

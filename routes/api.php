@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\BookingConflictController;
+use App\Http\Controllers\API\V1\Booking\Conflict\BookingConflictController;
 use Illuminate\Support\Facades\Route;
 
 

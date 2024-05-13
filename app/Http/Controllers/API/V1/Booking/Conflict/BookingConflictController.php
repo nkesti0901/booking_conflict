@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\V1\Booking\Conflict;
 
-use App\Helpers\InternalApiCall;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\BookingConfilictRequest;
+use App\Http\Resources\BookingResource;
 use App\Services\Booking\BookingService;
 
 class BookingConflictController extends Controller
@@ -12,8 +13,6 @@ class BookingConflictController extends Controller
     {
     }
     public function index(BookingConfilictRequest $request) {
-        $conflictsByDate = $this->bookingService->lookingConflictsByDate($request->date);
-        return view('booking.conflicts.date.index')
-            ->with('conflicts', $conflictsByDate);
+        return BookingResource::collection($this->bookingService->lookingConflictsByDate($request->date));
     }
 }
